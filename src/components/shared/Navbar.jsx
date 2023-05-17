@@ -4,18 +4,22 @@ import { AuthContext } from '../../contexts/AuthProvider';
 
 const Navbar = () => {
 
-    const {user,logOut} = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
+
+    const userName = 'Shaif Ali'
+    const url = "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80"
 
     console.log(user)
 
     const navLink = <>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/">All Toys</Link></li>
+        <li><Link to="/alltoys">All Toys</Link></li>
         <li><Link to="/">Blogs</Link></li>
+        <li><Link to="/register">Register</Link></li>
     </>
     const privateNavLink = <>
-        <li><Link to="/">My Toys</Link></li>
-        <li><Link to="/">Add A Toy</Link></li>
+        <li><Link to="/mytoys">My Toys</Link></li>
+        <li><Link to="/addtoy">Add A Toy</Link></li>
     </>
     return (
         <div>
@@ -44,9 +48,27 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
+
                     {
-                        user ? <button onClick={logOut} className='btn capitalize'>Log Out</button> : <Link to="/#login" className='btn capitalize'>Log In</Link>
+                        user ?
+                            // user image section
+                            <div className='flex align-middle'>
+                                <div data-tip={userName} className='tooltip tooltip-left mr-1'>
+                                    <label className=" btn btn-ghost btn-circle avatar">
+
+                                        <div className=" w-10 rounded-full">
+
+                                            <img src={url} />
+                                        </div>
+                                    </label>
+                                </div>
+                                <button onClick={logOut} className='btn capitalize'>Log Out</button>
+                            </div>
+
+                            : <Link to="/login" onClick={logOut} className='btn capitalize'>Log In</Link>
                     }
+
+
 
                 </div>
             </div>
