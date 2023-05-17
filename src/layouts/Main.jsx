@@ -1,12 +1,15 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
+import Navbar from '../components/shared/Navbar';
+import Footer from '../components/shared/Footer';
 
 const Main = () => {
     return (
-        <>
-            <h1>this is main layout</h1>
-            <Outlet></Outlet>
-        </>
+        <div className='bg-white'>
+        <Navbar></Navbar>
+        <Outlet></Outlet>
+        <Footer></Footer>
+        </div>
     );
 };
 
