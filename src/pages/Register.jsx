@@ -4,7 +4,7 @@ import { AuthContext } from '../contexts/AuthProvider';
 
 const Register = () => {
 
-    const { createUser, manageUser } = useContext(AuthContext)
+    const { createUser, manageUser,googleSignIn } = useContext(AuthContext)
 
     const [showPassword, setShowPassword] = useState(false);
     const [error, setError] = useState('')
@@ -29,13 +29,8 @@ const Register = () => {
             return
         }
 
-        console.log( email)
-
         createUser(email, password)
             .then(result => {
-                const createdUser = result.user;
-                console.log(createdUser);
-
 
                 manageUser(name, photo)
                     .then(result => {
@@ -45,21 +40,26 @@ const Register = () => {
                     .catch(error => {
                         console.log(error.message)
                     })
-
-
                 navigate(from, { replace: true })
             })
             .catch(error => {
                 console.log(error);
                 setError(error.message)
             })
-
-
-
-
     }
 
-
+    const handleGoogleSignIn = () => {
+        setError('')
+        googleSignIn()
+            .then(result => {
+                // console.log(result.user)
+                navigate(from, { replace: true })
+            })
+            .catch(err => {
+                console.log(err.message)
+                setError(err.message)
+            })
+    }
 
 
     const handlePasswordToggle = () => {
@@ -121,7 +121,7 @@ const Register = () => {
 
                     </form>
                     <div className="divider">OR</div>
-                    <button className='btn btn-outline btn-info w-full capitalize'>Register With Google</button>
+                    <button onClick={handleGoogleSignIn} className='btn btn-outline btn-info w-full capitalize'>Register With Google</button>
 
                 </div>
             </div>

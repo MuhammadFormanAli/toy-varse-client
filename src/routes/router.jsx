@@ -1,12 +1,12 @@
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import Main from '../layouts/Main';
-import Home from '../pages/Home';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
 import AllToys from '../pages/AllToys';
 import MyToys from '../pages/MyToys';
 import AddToy from '../pages/AddToy';
+import Home from '../pages/home/Home';
 
 const router = createBrowserRouter([
     {

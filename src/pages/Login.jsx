@@ -5,7 +5,7 @@ import { AuthContext } from '../contexts/AuthProvider';
 const Login = () => {
 
     const [showPassword, setShowPassword] = useState(false);
-    const [error, setError] = useState("kkkk")
+    const [error, setError] = useState("")
     const { signIn, googleSignIn } = useContext(AuthContext);
 
     const navigate = useNavigate()
@@ -41,7 +41,7 @@ const Login = () => {
     }
 
     // google login handler
-    const handleGoogleSignIn = () => {
+     const handleGoogleSignIn = () => {
         setError('')
         googleSignIn()
             .then(result => {
