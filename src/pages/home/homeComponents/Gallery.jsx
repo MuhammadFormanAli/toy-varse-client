@@ -25,6 +25,7 @@ const Gallery = () => {
                     </div>
                 </div>
             </section>
+            
         </div>
     );
 };
