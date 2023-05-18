@@ -1,13 +1,11 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext} from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider';
 
 const Navbar = () => {
 
-    const { user, logOut } = useContext(AuthContext)
-
-    const userName = 'Shaif Ali'
-    const url = "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80"
+    const { user,logOut } = useContext(AuthContext)
+   
 
     console.log(user)
 
@@ -37,7 +35,7 @@ const Navbar = () => {
 
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                    <a className="btn btn-ghost normal-case text-xl">ToyVerse</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -53,19 +51,19 @@ const Navbar = () => {
                         user ?
                             // user image section
                             <div className='flex align-middle'>
-                                <div data-tip={userName} className='tooltip tooltip-left mr-1'>
+                                <div data-tip={user?.displayName} className='tooltip tooltip-left mr-1'>
                                     <label className=" btn btn-ghost btn-circle avatar">
 
                                         <div className=" w-10 rounded-full">
 
-                                            <img src={url} />
+                                            <img src={user?.photoURL} />
                                         </div>
                                     </label>
                                 </div>
                                 <button onClick={logOut} className='btn capitalize'>Log Out</button>
                             </div>
 
-                            : <Link to="/login" onClick={logOut} className='btn capitalize'>Log In</Link>
+                            : <Link to="/login" className='btn capitalize'>Log In</Link>
                     }
 
 
