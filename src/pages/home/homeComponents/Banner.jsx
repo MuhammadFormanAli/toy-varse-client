@@ -45,6 +45,40 @@ const Banner = () => {
                         </div>
                     </div>
                 </SwiperSlide>
+                <SwiperSlide className='max-h-full'>
+                    <div className="h-full ">
+
+                        <div className="flex p-6 items-center justify-center flex-col-reverse md:flex-row gap-5">
+                            <div>
+                                <h1 className='bg-[#FF6799] text-white font-bold text-[25px] p-3 text-center'> Big Discount!!</h1>
+                                <h1 className='text-6xl font-bold'>KIDS OFFER</h1>
+                                <h1 className='font-bold text-3xl'>10% off</h1>
+                                <button className='p-3 border-none btn rounded-full bg-[#4ACDD5]'>Shop Now</button>
+                            </div>
+                            <div>
+                            <img  className='h-[300px] w-[400px]' src='/banner.png' alt="" />
+                            </div>
+
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide className='max-h-full'>
+                    <div className="h-full ">
+
+                        <div className="flex p-6 items-center justify-center flex-col-reverse md:flex-row gap-5">
+                            <div>
+                                <h1 className='bg-[#FF6799] text-white font-bold text-[25px] p-3 text-center'> Big Discount!!</h1>
+                                <h1 className='text-6xl font-bold'>KIDS OFFER</h1>
+                                <h1 className='font-bold text-3xl'>10% off</h1>
+                                <button className='p-3 border-none btn rounded-full bg-[#4ACDD5]'>Shop Now</button>
+                            </div>
+                            <div>
+                            <img  className='h-[300px] w-[400px]' src='/banner.png' alt="" />
+                            </div>
+
+                        </div>
+                    </div>
+                </SwiperSlide>
 
             </Swiper>
 
