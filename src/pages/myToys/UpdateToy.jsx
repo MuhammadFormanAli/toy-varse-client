@@ -14,7 +14,7 @@ const UpdateToy = () => {
         const description = form.description.value
         const updatedToy = { price, quantity, description }
 
-        fetch(`http://localhost:5000/toys/${toy._id}`, {
+        fetch(`https://toy-marketplace-server-side-kohl.vercel.app/toys/${toy._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

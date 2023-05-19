@@ -11,7 +11,7 @@ const AllToys = () => {
     const [query, setQuery] = useState('')
 
     useEffect(() => {
-        fetch('http://localhost:5000/toys')
+        fetch('https://toy-marketplace-server-side-kohl.vercel.app/toys')
             .then(res => res.json())
             .then(result => setToys(result))
 

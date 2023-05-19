@@ -35,13 +35,13 @@ const router = createBrowserRouter([
         {
           path:"alltoys/toy/:id",
           element:<PrivetRoute><ToyDetails></ToyDetails></PrivetRoute>,
-          loader:({params})=>fetch(`http://localhost:5000/toys/${params.id}`)
+          loader:({params})=>fetch(`https://toy-marketplace-server-side-kohl.vercel.app/toys/${params.id}`)
           
         },
         {
           path:"mytoys/update/:id",
           element:<PrivetRoute><UpdateToy></UpdateToy></PrivetRoute>,
-          loader:({params})=>fetch(`http://localhost:5000/toys/${params.id}`)
+          loader:({params})=>fetch(`https://toy-marketplace-server-side-kohl.vercel.app/toys/${params.id}`)
         },
         {
           path:"/mytoys",

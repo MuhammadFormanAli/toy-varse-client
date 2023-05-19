@@ -19,7 +19,7 @@ const AddToy = () => {
         const user = { name, email };
         console.log(user);
     
-        fetch('http://localhost:5000/toys', {
+        fetch('https://toy-marketplace-server-side-kohl.vercel.app/toys', {
           method: 'POST',
           headers: {
             'content-type': 'application/json'
@@ -53,7 +53,7 @@ const AddToy = () => {
         const email = form.email.value
         const toy ={imgUrl,toyName,category,price,rating,quantity,description,sellerName,email}
 
-        fetch('http://localhost:5000/toys', {
+        fetch('https://toy-marketplace-server-side-kohl.vercel.app/toys', {
             method: 'POST',
             headers: {
               'content-type': 'application/json'
