@@ -1,21 +1,21 @@
-import React, { useContext} from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider';
 
 const Navbar = () => {
 
-    const { user,logOut } = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
 
     const navLink = <>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/alltoys">All Toys</Link></li>
-        <li><Link to="/">Blogs</Link></li>
-        <li><Link to="/register">Register</Link></li>
-    </>
-    const privateNavLink = <>
+        <li><Link to="/blog">Blog</Link></li>
         <li><Link to="/mytoys">My Toys</Link></li>
-        <li><Link to="/addtoy">Add A Toy</Link></li>
+        <li><Link to="/addtoy">Add Toy</Link></li>
+
+
     </>
+
     return (
         <div>
             <div className="navbar bg-base-100">
@@ -27,7 +27,7 @@ const Navbar = () => {
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             {navLink}
                             {
-                                user ? privateNavLink : ""
+                                user ? '' : <li><Link to="/register">Register</Link></li>
                             }
 
                         </ul>
@@ -37,8 +37,9 @@ const Navbar = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         {navLink}
+
                         {
-                            user ? privateNavLink : ""
+                            user ? '' : <li><Link to="/register">Register</Link></li>
                         }
                     </ul>
                 </div>
@@ -50,20 +51,15 @@ const Navbar = () => {
                             <div className='flex align-middle'>
                                 <div data-tip={user?.displayName} className='tooltip tooltip-left mr-1'>
                                     <label className=" btn btn-ghost btn-circle avatar">
-
                                         <div className=" w-10 rounded-full">
-
                                             <img src={user?.photoURL} />
                                         </div>
                                     </label>
                                 </div>
                                 <button onClick={logOut} className='btn capitalize'>Log Out</button>
                             </div>
-
                             : <Link to="/login" className='btn capitalize'>Log In</Link>
                     }
-
-
 
                 </div>
             </div>

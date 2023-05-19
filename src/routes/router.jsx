@@ -1,12 +1,14 @@
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import Main from '../layouts/Main';
-import Login from '../pages/Login';
-import Register from '../pages/Register';
-import AllToys from '../pages/AllToys';
-import MyToys from '../pages/MyToys';
-import AddToy from '../pages/AddToy';
+import Login from '../pages/login/Login';
+import Register from '../pages/register/Register';
+import MyToys from '../pages/myToys/MyToys';
+import AddToy from '../pages/addToys/AddToy';
 import Home from '../pages/home/Home';
+import AllToys from '../pages/allToys/AllToys';
+import PrivetRoute from './PrivetRoute';
+import ToyDetails from '../pages/allToys/ToyDetails';
 
 const router = createBrowserRouter([
     {
@@ -30,15 +32,22 @@ const router = createBrowserRouter([
           element:<AllToys></AllToys>
         },
         {
+          path:"alltoys/toy/:id",
+          element:<PrivetRoute><ToyDetails></ToyDetails></PrivetRoute>,
+          loader:({params})=>fetch(`http://localhost:5000/toys/${params.id}`)
+          
+        },
+        {
           path:"/mytoys",
-          element:<MyToys></MyToys>
+          element:<PrivetRoute><MyToys></MyToys></PrivetRoute>
         },
         {
           path:"/addtoy",
-          element:<AddToy></AddToy>
-        }
+          element:<PrivetRoute><AddToy></AddToy></PrivetRoute>
+        },
       ]
     },
+    
   ]);
 
 export default router;

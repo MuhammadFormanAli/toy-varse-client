@@ -39,7 +39,7 @@ const Banner = () => {
                                 <button className='p-3 border-none btn rounded-full bg-[#4ACDD5]'>Shop Now</button>
                             </div>
                             <div>
-                            <img  className='h-[300px] w-[400px]' src='/banner.png' alt="" />
+                            <img  className='h-[300px] w-[400px]' src='/banner-1.png' alt="" />
                             </div>
 
                         </div>
@@ -56,7 +56,7 @@ const Banner = () => {
                                 <button className='p-3 border-none btn rounded-full bg-[#4ACDD5]'>Shop Now</button>
                             </div>
                             <div>
-                            <img  className='h-[300px] w-[400px]' src='/banner.png' alt="" />
+                            <img  className='h-[300px] w-[400px]' src='/banner-2.png' alt="" />
                             </div>
 
                         </div>
@@ -73,7 +73,7 @@ const Banner = () => {
                                 <button className='p-3 border-none btn rounded-full bg-[#4ACDD5]'>Shop Now</button>
                             </div>
                             <div>
-                            <img  className='h-[300px] w-[400px]' src='/banner.png' alt="" />
+                            <img  className='h-[300px] w-[400px]' src='/banner-3.png' alt="" />
                             </div>
 
                         </div>

@@ -2,12 +2,14 @@ import React from 'react';
 
 const Gallery = () => {
     const images = [
-        '/33454-6-plush-toy.png',
-        '/banner.png',
-        '/33454-6-plush-toy.png',
-        '/banner.png',
-        '/33454-6-plush-toy.png',
-        '/banner.png',
+        '/images/blackPanther-1.jpg',
+        '/images/groot-1.jpg',
+        '/images/hulk-1.jpg',
+        '/images/spiderman-1.jpg',
+        '/images/transformer-1.jpg',
+        '/images/transformer-2.jpg',
+        
+        
 
     ];
     return (
