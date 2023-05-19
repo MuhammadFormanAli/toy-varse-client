@@ -17,7 +17,7 @@ const MyToysRow = ({ myToys,handleDelete }) => {
             <td>{category}</td>
             <td>{price}</td>
             <td>{quantity}</td>
-            <td> <Link to={`toy/${myToys._id}`}> <button className='btn '>Update</button> </Link> </td>
+            <td> <Link to={`update/${myToys._id}`}> <button className='btn '>Update</button> </Link> </td>
             <td>  <button onClick={()=>handleDelete(myToys._id)} className='btn '>Delete</button></td>
         </tr>
 
