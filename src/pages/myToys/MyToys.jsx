@@ -9,12 +9,27 @@ const MyToys = () => {
     const [myToys, setMyToys] = useState(null)
     useTitle('My Toys')
 
-    const url = `https://toy-marketplace-server-side-kohl.vercel.app/toys?${user.email}`
+    const url1 = `https://toy-marketplace-server-side-kohl.vercel.app/toys?${user.email}`
+    const url2 = `http://localhost:5000/sort?email=${user.email}&sort=1`
+    const url3 = `http://localhost:5000/sort?email=${user.email}&sort=-1`
+
+    const [url, setUrl] = useState(url1)
+
+
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
             .then(result => setMyToys(result))
-    }, [])
+    }, [url])
+
+    const handleAscending = () => {
+        setUrl(url2)
+        console.log('from url 2')
+    }
+    const handleDescending = () => {
+        setUrl(url3)
+        console.log('from url 3')
+    }
 
 
     const handleDelete = _id => {
@@ -46,19 +61,23 @@ const MyToys = () => {
                             setMyToys(remaining);
                         }
                     })
-
             }
         })
-
-
-        // console.log( 'delete', _id);
     }
-    // console.log(myToys)
+
     return (
         <div>
 
+
+            
+
             <div className="overflow-x-auto my-5">
+                <div className='my-5'>
+                    <button onClick={handleAscending} className='btn mr-5'>Ascending</button>
+                    <button onClick={handleDescending} className='btn'>Descending</button>
+                </div>
                 <table className="table table-zebra w-full">
+
                     {/* head */}
                     <thead>
                         <tr className='text-center'>
