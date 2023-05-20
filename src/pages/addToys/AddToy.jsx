@@ -1,11 +1,13 @@
 import React, { useContext } from 'react';
 import { AuthContext, } from '../../contexts/AuthProvider';
 import useTitle from '../../useTitle';
+import Swal from 'sweetalert2';
 
 
 const AddToy = () => {
   const { user, loading } = useContext(AuthContext)
   useTitle('Add Toy')
+
 
   if (loading) {
     return <div>loading...</div>
@@ -14,30 +16,34 @@ const AddToy = () => {
 
 
 
-  const handleAddUser = event => {
-    event.preventDefault();
-    const form = event.target;
-    const name = form.name.value;
-    const email = form.email.value;
-    const user = { name, email };
-    console.log(user);
+  // const handleAddUser = event => {
+  //   event.preventDefault();
+  //   const form = event.target;
+  //   const name = form.name.value;
+  //   const email = form.email.value;
+  //   const user = { name, email };
+  //   console.log(user);
 
-    fetch('https://toy-marketplace-server-side-kohl.vercel.app/toys', {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json'
-      },
-      body: JSON.stringify(toy)
-    })
-      .then(res => res.json())
-      .then(data => {
-        console.log(data);
-        if (data.insertedId) {
-          alert('Users added successfully');
-          form.reset();
-        }
-      })
-  }
+  //   fetch('https://toy-marketplace-server-side-kohl.vercel.app/toys', {
+  //     method: 'POST',
+  //     headers: {
+  //       'content-type': 'application/json'
+  //     },
+  //     body: JSON.stringify(toy)
+  //   })
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       console.log(data);
+  //       if (data.insertedId) {
+          // Swal.fire(
+          //   'Deleted!',
+          //   'Your file has been deleted.',
+          //   'success'
+          // );
+  //         form.reset();
+  //       }
+  //     })
+  // }
 
 
 
@@ -67,7 +73,11 @@ const AddToy = () => {
       .then(data => {
         console.log(data);
         if (data.insertedId) {
-          alert('Toy added successfully');
+          Swal.fire(
+            'Added',
+            'Your file has been Added.',
+            'success'
+          );
           form.reset();
         }
       })
