@@ -11,7 +11,7 @@ import { Autoplay, Navigation, Pagination } from "swiper";
 
 const Banner = () => {
     return (
-        <div className=' bg-base-200'>
+        <div  className=' bg-base-200'>
 
 
             <Swiper
@@ -38,7 +38,7 @@ const Banner = () => {
                                 <button className='p-3 border-none btn rounded-full bg-[#4ACDD5]'>Shop Now</button>
                             </div>
                             <div>
-                            <img  className='h-[300px] w-[400px]' src='/banner-1.png' alt="" />
+                            <img  className='h-[300px] w-[400px]' src='/banner-1.png' alt=""/>
                             </div>
 
                         </div>
