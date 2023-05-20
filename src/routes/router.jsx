@@ -11,12 +11,13 @@ import PrivetRoute from './PrivetRoute';
 import ToyDetails from '../pages/allToys/ToyDetails';
 import UpdateToy from '../pages/myToys/UpdateToy';
 import Blog from '../pages/blog/Blog';
+import Error from '../pages/Error';
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,
-      errorElement:<div>Error page comming soon</div>,
+      errorElement:<Error></Error>,
       children:[
         {
           path:"/",
