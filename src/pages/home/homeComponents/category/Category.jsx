@@ -11,7 +11,7 @@ const Category = () => {
     const [categoryName, setCategoryName] = useState('marvel')
 
     useEffect(() => {
-        fetch(`http://localhost:5000/toys?category=${categoryName}`)
+        fetch(`https://toy-marketplace-server-side-kohl.vercel.app/toys?category=${categoryName}`)
             .then(res => res.json())
             .then(result => setCategoryItems(result))
     }, [categoryName])
