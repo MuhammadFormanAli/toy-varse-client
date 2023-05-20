@@ -3,7 +3,7 @@ import ToysRow from './ToysRow';
 
 
 const AllToys = () => {
-    const [ loading ,setLoading ] = useState(true)
+    const [loading, setLoading] = useState(true)
 
     const [toys, setToys] = useState([])
 
@@ -27,7 +27,10 @@ const AllToys = () => {
 
     const handleSearch = (event) => {
         event.preventDefault()
-        
+        const searchText = event.target.search.value.toLowerCase()
+        const filteredToys = toys.filter(toy => toy.toyName.toLowerCase().includes(searchText))
+        setToys(filteredToys)
+
     }
 
     return (
