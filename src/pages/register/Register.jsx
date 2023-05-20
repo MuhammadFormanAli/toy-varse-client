@@ -1,10 +1,12 @@
 import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider';
+import useTitle from '../../useTitle';
 
 const Register = () => {
 
     const { createUser, manageUser,googleSignIn } = useContext(AuthContext)
+    useTitle('Register')
 
     const [showPassword, setShowPassword] = useState(false);
     const [error, setError] = useState('')

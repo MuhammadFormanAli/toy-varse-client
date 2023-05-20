@@ -1,6 +1,8 @@
 import React from 'react';
+import useTitle from '../../../../useTitle';
 
 const Gallery = () => {
+
     const images = [
         '/images/blackPanther-1.jpg',
         '/images/groot-1.jpg',
@@ -12,6 +14,7 @@ const Gallery = () => {
 
 
     ];
+
     return (
         <div>
             <section className="pb-10 bg-base-200 my-5">

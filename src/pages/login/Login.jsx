@@ -1,12 +1,14 @@
 import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider';
+import useTitle from '../../useTitle';
 
 const Login = () => {
 
     const [showPassword, setShowPassword] = useState(false);
     const [error, setError] = useState("")
     const { signIn, googleSignIn } = useContext(AuthContext);
+    useTitle("Login")
 
     const navigate = useNavigate()
     const location = useLocation()
