@@ -1,30 +1,41 @@
 import React, { useContext, useEffect, useState } from 'react';
 import ToysRow from './ToysRow';
-import { AuthContext } from '../../contexts/AuthProvider';
+
 
 const AllToys = () => {
-    const {loading} = useContext(AuthContext)
+    const [ loading ,setLoading ] = useState(true)
+
     const [toys, setToys] = useState([])
 
-
-
-    const [query, setQuery] = useState('')
 
     useEffect(() => {
         fetch('https://toy-marketplace-server-side-kohl.vercel.app/toys')
             .then(res => res.json())
-            .then(result => setToys(result))
+            .then(result => {
+                setToys(result)
+                setLoading(false)
+            })
+
 
     }, [])
-    console.log(toys)
-    if(loading){
+
+
+    if (loading) {
         return <div>Loading.........</div>
     }
 
 
+    const handleSearch = (event) => {
+        event.preventDefault()
+        
+    }
+
     return (
-        <div>
-            <input type="search" onChange={e => setQuery(e.target.value)} placeholder='Search By "Toy Name"' className="w-1/2 mx-auto border block my-4 border-gray-300 px-3 py-2 rounded-lg focus:outline-none focus:border-blue-500" />
+        <div className='my-5'>
+            <form onSubmit={handleSearch}>
+                <input type="text" name='search' onChange={e => setQuery(e.target.value)} placeholder='Search By "Toy Name"' className="w-1/2 mx-auto border block my-4 border-gray-300 px-3 py-2 rounded-lg focus:outline-none focus:border-blue-500" />
+                <input type="submit" value="Search" />
+            </form>
 
             <div className="overflow-x-auto">
                 <table className="table table-zebra w-full">
@@ -36,7 +47,7 @@ const AllToys = () => {
                             <th>Category</th>
                             <th>Price</th>
                             <th>Available  Quantity</th>
-                            <th></th>
+                            <th>Action</th>
                         </tr>
                     </thead>
 

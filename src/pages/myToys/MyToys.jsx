@@ -33,7 +33,7 @@ const MyToys = () => {
     return (
         <div>
 
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto my-5">
                 <table className="table table-zebra w-full">
                     {/* head */}
                     <thead>
@@ -43,8 +43,8 @@ const MyToys = () => {
                             <th>Category</th>
                             <th>Price</th>
                             <th>Available  Quantity</th>
-                            <th></th>
-                            <th></th>
+                            <th>Action</th>
+                            
                         </tr>
                     </thead>
 

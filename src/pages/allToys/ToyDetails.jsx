@@ -10,9 +10,9 @@ const ToyDetails = () => {
     console.log(toy)
     return (
         <div>
-            <div className="flex justify-center items-center p-14 bg-gray-100">
-                <div className="max-w-3xl bg-white rounded-lg shadow-lg p-8">
-                    <div className='w-full bg-slate-100 p-5 flex flex-col gap-6 md:flex-row items-center justify-center'>
+            <div className="w-full flex justify-center items-center p-5 bg-gray-100">
+                <div className="max-w-full bg-slate-100 border rounded-lg shadow-lg p-8">
+                    <div className=' p-5 flex flex-col gap-6 md:flex-row items-center justify-center'>
                         <img src={imgUrl} alt="Toy" className=" w-full  md:w-1/2  md:m-4" />
 
                         <div className=' w-1/2 text-left font-bold text-lg'>

@@ -84,9 +84,9 @@ const AddToy = () => {
 
                     <select name="subCategory" className="w-full border border-gray-300 px-3 py-2 rounded-lg focus:outline-none focus:border-blue-500" required >
                         <option disabled selected value="">Select sub-category</option>
-                        <option value="Marvel">Marvel</option>
-                        <option value="Avengers">Avengers</option>
-                        <option value="Transformer">Transformer</option>
+                        <option value="marvel">Marvel</option>
+                        <option value="avengers">Avengers</option>
+                        <option value="transformer">Transformer</option>
                     </select>
 
                     <input type="text" name="price" className="w-full border border-gray-300 px-3 py-2 rounded-lg focus:outline-none focus:border-blue-500" placeholder='Enter Toy Price' required />

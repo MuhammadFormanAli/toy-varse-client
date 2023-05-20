@@ -10,15 +10,15 @@ const Navbar = () => {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/alltoys">All Toys</Link></li>
         <li><Link to="/blog">Blog</Link></li>
+    </>
+    const conditionalNavLink = <>
         <li><Link to="/mytoys">My Toys</Link></li>
         <li><Link to="/addtoy">Add Toy</Link></li>
-
-
     </>
 
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className="navbar bg-base-300">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -27,8 +27,9 @@ const Navbar = () => {
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             {navLink}
                             {
-                                user ? '' : <li><Link to="/register">Register</Link></li>
-                            }
+                            user ? <>        <li><Link to="/mytoys">My Toys</Link></li>
+                            <li><Link to="/addtoy">Add Toy</Link></li></> : <li><Link to="/register">Register</Link></li>
+                        }
 
                         </ul>
                     </div>
@@ -39,7 +40,8 @@ const Navbar = () => {
                         {navLink}
 
                         {
-                            user ? '' : <li><Link to="/register">Register</Link></li>
+                            user ? <>        <li><Link to="/mytoys">My Toys</Link></li>
+                            <li><Link to="/addtoy">Add Toy</Link></li></> : <li><Link to="/register">Register</Link></li>
                         }
                     </ul>
                 </div>

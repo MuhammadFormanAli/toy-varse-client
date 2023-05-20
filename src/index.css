@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* custom style for category btn */
+.active{
+    background-color: #FF6799;
+    padding: 5px;
+    border: none;
+    font-weight: bold;
+    font-size: 25px;
+    
+}
+.in-active{
+    background-color: rgb(152, 221, 238);
+    padding: 5px;
+    border: none;
+    font-weight: 500;
+    font-size: 25px;
+    
+}
