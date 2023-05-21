@@ -12,7 +12,7 @@ const Review = () => {
     return (
         <div>
             <div className="py-5">
-  <h1 className="text-center font-bold mb-5">Our Happy Clients</h1>
+  <h1 className="text-center font-bold text-2xl mb-5">Our Happy Clients</h1>
 
   <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4 bg-slate-200 p-5">
     {clients.map((idx) => (

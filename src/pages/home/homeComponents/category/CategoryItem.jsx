@@ -12,10 +12,11 @@ const CategoryItem = ({ item }) => {
         <div className="card card-compact w-96 bg-base-100 shadow-xl" data-aos="zoom-in" data-aos-duration="400">
             <figure><img src={imgUrl} alt="" /></figure>
             <div className="card-body">
-                <h2 className="card-title text-2xl">{toyName}</h2>
+                <h2 className="card-title text-2xl"> Name ot toy:{toyName}</h2>
                 <div className='flex justify-between'>
                     <p className=' flex items-center font-bold text-lg'>Price:< FaDollarSign className='font-bold text-2xl'/>{price}</p>
-                    <span className='pr-4'>Rating : {rating}</span><span>
+                    <span className='pr-4'>Rating : {rating}</span>
+                    <span>
                         <Rating
                         className='text-yellow-500'
                         placeholderRating={rating}
@@ -25,7 +26,7 @@ const CategoryItem = ({ item }) => {
                     /></span>
 
                 </div>
-                <div className="card-actions justify-end">
+                <div className="card-actions justify-center">
                     <Link to={`alltoys/toy/${_id}`} className="btn btn-primary">Details</Link>
                 </div>
             </div>
