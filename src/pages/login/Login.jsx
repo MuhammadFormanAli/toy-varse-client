@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider';
 import useTitle from '../../useTitle';
+import Swal from 'sweetalert2';
 
 const Login = () => {
 
@@ -33,6 +34,11 @@ const Login = () => {
          // console.log(email, password)
         signIn(email, password)
             .then(result => {
+                Swal.fire(
+                    'logged In',
+                    'Your are successfully logged in.',
+                    'success'
+                  );
                 const loggedUser = result.user;
                 console.log(loggedUser);
                 navigate(from, { replace: true })
