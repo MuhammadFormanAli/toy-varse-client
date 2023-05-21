@@ -1,8 +1,11 @@
 import React from 'react';
 import Banner from './homeComponents/banner/Banner';
 import Gallery from './homeComponents/gallery/Gallery';
-import Category from './homeComponents/category/category';
+
 import useTitle from '../../useTitle';
+import ContactUs from './homeComponents/contact/ContactUs';
+import Category from './homeComponents/category/Category';
+import Review from './homeComponents/customerReview/Review';
 
 const Home = () => {
     useTitle("HOME")
@@ -11,6 +14,8 @@ const Home = () => {
             <Banner></Banner>
             <Gallery></Gallery>
             <Category></Category>
+            <Review></Review>
+            <ContactUs></ContactUs>
         </div>
     );
 };

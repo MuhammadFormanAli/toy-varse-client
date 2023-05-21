@@ -19,3 +19,19 @@
     font-size: 25px;
     
 }
+
+/* style for active link */
+.active-link{
+    padding: 0px 15px;
+    text-decoration: none;
+    color: #7E90FE;
+    font-size: 17px;
+    font-weight: 800;
+}
+.nav-link{
+    padding: 0px 15px;
+    text-decoration: none;
+    color: #ac8572;
+    font-size: 16px;
+    font-weight: 700;;
+}

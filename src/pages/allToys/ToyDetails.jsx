@@ -1,6 +1,8 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import useTitle from '../../useTitle';
+import { FaRegStar, FaStar } from 'react-icons/fa';
+import Rating from 'react-rating';
 
 const ToyDetails = () => {
 
@@ -15,14 +17,18 @@ const ToyDetails = () => {
                     <div className=' p-5 flex flex-col gap-6 md:flex-row items-center justify-center'>
                         <img src={imgUrl} alt="Toy" className=" w-full  md:w-1/2  md:m-4" />
 
-                        <div className=' w-1/2 text-left font-bold text-lg'>
+                        <div className=' w-full md:w-1/2 text-left font-bold text-lg'>
                             <p className='text-cyan-500'>Name of Toy :{toyName}</p>
                             <p className='text-slate-500'>Seller Name:{sellerName}</p>
                             <p className='text-slate-500'>Seller Email:{email}</p>
                             <p className='text-lime-600'>Price:${price}</p>
                             <p className='text-red-700'>Available Quantity:{quantity}</p>
-                            <p className='text-yellow-700'>Rating:{rating}</p>
-                            <button  className="bg-blue-500 disabled: hover:bg-blue-700 text-white font-bold py-2 px-4 mt-4 rounded">
+                            <p className='text-yellow-700'>Rating:<Rating className='text-yellow-500'
+                                placeholderRating={rating}
+                                emptySymbol={<FaRegStar />}
+                                placeholderSymbol={<FaStar />}
+                                fullSymbol={<FaStar />}></Rating></p>
+                            <button className="bg-blue-500 disabled: hover:bg-blue-700 text-white font-bold py-2 px-4 mt-4 rounded">
                                 Add to Cart
                             </button>
                         </div>

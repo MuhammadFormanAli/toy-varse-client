@@ -1,6 +1,7 @@
 import React from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import { FaArrowRight, FaBeer } from 'react-icons/fa'
 
 // Import Swiper styles
 import "swiper/css";
@@ -24,7 +25,7 @@ const Banner = () => {
                 navigation={true}
                 modules={[Pagination, Navigation, Autoplay]}
                 className="mySwiper h-[700px] md:h-96"
-                autoplay={{ delay: 5000 }}
+                autoplay={{ delay: 4000 }}
             >
 
                 <SwiperSlide className='max-h-full'>
@@ -35,7 +36,7 @@ const Banner = () => {
                                 <h1 className='bg-[#FF6799] text-white font-bold text-[25px] p-3 text-center'> Big Discount!!</h1>
                                 <h1 className='text-6xl font-bold'>KIDS OFFER</h1>
                                 <h1 className='font-bold text-3xl'>10% off</h1>
-                                <button className='p-3 border-none btn rounded-full bg-[#4ACDD5]'>Shop Now</button>
+                                <button className='p-3 border-none btn rounded-full bg-[#4ACDD5]'>Shop Now<FaArrowRight /></button>
                             </div>
                             <div>
                             <img  className='h-[300px] w-[400px]' src='/banner-1.png' alt=""/>
@@ -52,7 +53,7 @@ const Banner = () => {
                                 <h1 className='bg-[#FF6799] text-white font-bold text-[25px] p-3 text-center'> Big Discount!!</h1>
                                 <h1 className='text-6xl font-bold'>KIDS OFFER</h1>
                                 <h1 className='font-bold text-3xl'>10% off</h1>
-                                <button className='p-3 border-none btn rounded-full bg-[#4ACDD5]'>Shop Now</button>
+                                <button className='p-3 border-none btn rounded-full bg-[#4ACDD5]'>Shop Now<FaArrowRight /></button>
                             </div>
                             <div>
                             <img  className='h-[300px] w-[400px]' src='/banner-2.png' alt="" />
@@ -69,7 +70,7 @@ const Banner = () => {
                                 <h1 className='bg-[#FF6799] text-white font-bold text-[25px] p-3 text-center'> Big Discount!!</h1>
                                 <h1 className='text-6xl font-bold'>KIDS OFFER</h1>
                                 <h1 className='font-bold text-3xl'>10% off</h1>
-                                <button className='p-3 border-none btn rounded-full bg-[#4ACDD5]'>Shop Now</button>
+                                <button className='p-3 border-none btn rounded-full bg-[#4ACDD5]'>Shop Now<FaArrowRight /></button>
                             </div>
                             <div>
                             <img  className='h-[300px] w-[400px]' src='/banner-3.png' alt="" />

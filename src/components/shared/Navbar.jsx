@@ -1,19 +1,16 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider';
+import ActiveLink from './ActiveLink';
 
 const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext)
 
     const navLink = <>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/alltoys">All Toys</Link></li>
-        <li><Link to="/blog">Blog</Link></li>
-    </>
-    const conditionalNavLink = <>
-        <li><Link to="/mytoys">My Toys</Link></li>
-        <li><Link to="/addtoy">Add Toy</Link></li>
+        <li><ActiveLink to="/">Home</ActiveLink></li>
+        <li><ActiveLink to="/alltoys">All Toys</ActiveLink></li>
+        <li><ActiveLink to="/blog">Blog</ActiveLink></li>
     </>
 
     return (
@@ -27,21 +24,23 @@ const Navbar = () => {
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             {navLink}
                             {
-                            user ? <>        <li><Link to="/mytoys">My Toys</Link></li>
-                            <li><Link to="/addtoy">Add Toy</Link></li></> : <li><Link to="/register">Register</Link></li>
+                            user ? <><li><ActiveLink to="/mytoys">My Toys</ActiveLink></li>
+                            <li><ActiveLink to="/addtoy">Add Toy</ActiveLink></li></> : <li><ActiveLink to="/register">Register</ActiveLink></li>
                         }
 
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">ToyVerse</a>
+                    <div>
+                        <Link to='/'><img className='w-52 btn' src="/logo.png" alt="" /></Link>
+                    </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         {navLink}
 
                         {
-                            user ? <>        <li><Link to="/mytoys">My Toys</Link></li>
-                            <li><Link to="/addtoy">Add Toy</Link></li></> : <li><Link to="/register">Register</Link></li>
+                            user ? <><li><ActiveLink to="/mytoys">My Toys</ActiveLink></li>
+                            <li><ActiveLink to="/addtoy">Add Toy</ActiveLink></li></> : <li><ActiveLink to="/register">Register</ActiveLink></li>
                         }
                     </ul>
                 </div>

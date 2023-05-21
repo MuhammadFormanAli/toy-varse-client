@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ToysRow from './ToysRow';
 import useTitle from '../../useTitle';
 
@@ -18,7 +18,9 @@ const AllToys = () => {
     }, [])
 
     if (loading) {
-        return <div>Loading.........</div>
+        return <div className="flex justify-center items-center h-screen">
+            <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-gray-900"></div>
+        </div>
     }
 
 
@@ -41,14 +43,14 @@ const AllToys = () => {
                 <table className="table table-zebra w-full">
                     {/* head */}
                     <thead>
-                    <tr>
+                        <tr>
                             <th className='text-left'>Toy Name and category</th>
                             <th>Seller</th>
                             <th>Price</th>
                             <th>Available  Quantity</th>
                             <th>Rating</th>
                             <th>Action</th>
-                            
+
                         </tr>
                     </thead>
 

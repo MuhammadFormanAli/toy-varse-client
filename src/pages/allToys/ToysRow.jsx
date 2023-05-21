@@ -1,4 +1,6 @@
 import React from 'react';
+import { FaRegStar, FaStar } from 'react-icons/fa';
+import Rating from 'react-rating';
 import { Link } from 'react-router-dom';
 
 const ToysRow = ({ toy }) => {
@@ -23,7 +25,12 @@ const ToysRow = ({ toy }) => {
             <td>{sellerName}</td>
             <td>{price}</td>
             <td>{quantity}</td>
-            <td>{rating}</td>
+            <td><Rating className='text-yellow-500'
+                        placeholderRating={rating}
+                        emptySymbol={ <FaRegStar/>}
+                        placeholderSymbol={<FaStar/>}
+                        fullSymbol={<FaStar/>}></Rating>
+                        </td>
             <td>
                 <div>
                     <td> <Link to={`toy/${toy._id}`}> <button className='btn '>Details</button> </Link> </td>

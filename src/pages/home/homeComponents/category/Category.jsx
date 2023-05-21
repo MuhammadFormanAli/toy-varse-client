@@ -22,8 +22,6 @@ const Category = () => {
         setCategoryName(category)
     }
 
-    console.log(categoryItems, active)
-
     return (
         <div className='bg-[#F2F2F2] p-8 my-5'>
             <h1 className='text-5xl font-bold text-center'>Shop by Category</h1>

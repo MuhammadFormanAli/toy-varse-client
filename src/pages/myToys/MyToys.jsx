@@ -9,9 +9,10 @@ const MyToys = () => {
     const [myToys, setMyToys] = useState(null)
     useTitle('My Toys')
 
-    const url1 = `https://toy-marketplace-server-side-kohl.vercel.app/toys?${user.email}`
+    const url1 = `https://toy-marketplace-server-side-kohl.vercel.app/toys?email=${user.email}`
     const url2 = `https://toy-marketplace-server-side-kohl.vercel.app/sort?email=${user.email}&sort=1`
     const url3 = `https://toy-marketplace-server-side-kohl.vercel.app/sort?email=${user.email}&sort=-1`
+    
 
     const [url, setUrl] = useState(url1)
 
