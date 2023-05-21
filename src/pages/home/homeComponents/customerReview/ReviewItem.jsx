@@ -13,6 +13,7 @@ const ReviewItem = ({idx}) => {
               <Rating
                 className='text-yellow-500'
                 placeholderRating={5}
+                readonly
                 emptySymbol={<FaRegStar />}
                 placeholderSymbol={<FaStar />}
                 fullSymbol={<FaStar />}

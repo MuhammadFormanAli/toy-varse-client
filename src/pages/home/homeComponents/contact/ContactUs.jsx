@@ -9,23 +9,28 @@ const ContactUs = () => {
       <div className='flex flex-col md:flex-row gap-2'>
         <div className='w-full md:w-1/2 grid grid-cols-2 gap-1'>
           <div className='bg-slate-200 text-center p-4 card' data-aos="fade-down-right">
+            <img src="/images/location.png" alt="" className='w-[45px] text block mx-auto' />
 
             <h1 className='font-bold text-xl'>Address</h1>
             <p className='font-bold text-lg'>Aladan street</p>
             <p className='font-bold text-lg'>New Yourk</p>
           </div>
-          <div className='bg-slate-200 text-center p-4 card  ' data-aos="fade-down-left">
 
+          <div className='bg-slate-200 text-center p-4 card  ' data-aos="fade-down-left">
+          <img src="/images/call.png" alt="" className='w-[45px] text block mx-auto' />
             <h1 className='font-bold text-xl'>Call us</h1>
             <p className='font-bold text-lg'>Aladan street</p>
             <p className='font-bold text-lg'>New Yourk</p>
           </div>
+
           <div className='bg-slate-200 text-center p-4 card' data-aos="fade-up-right">
+          <img src="/images/email.png" alt="" className='w-[45px] text block mx-auto' />
             <h1 className='font-bold text-xl'>Email Us</h1>
             <p className='font-bold text-lg'>info@gmail.com</p>
             <p className='font-bold text-lg'>info@gmail.com</p>
           </div>
           <div className='bg-slate-200 text-center p-4 card ' data-aos="fade-up-left">
+          <img src="/images/time.png" alt="" className='w-[45px] text block mx-auto' />
             <h1 className='font-bold text-xl'>Working Hours</h1>
             <p className='font-bold text-lg'>Mon-fri : 9am - 5pm</p>
             <p className='font-bold text-lg'>Sunday: 9am - 1pm </p>
