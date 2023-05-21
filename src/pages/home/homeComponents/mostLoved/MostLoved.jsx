@@ -6,7 +6,7 @@ const MostLoved = () => {
     const [trending, setTrending] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/trending')
+        fetch('https://toy-marketplace-server-side-kohl.vercel.app/trending')
             .then(res => res.json())
             .then(result => setTrending(result))
     }, [])
@@ -20,7 +20,7 @@ console.log(trending)
 
 
 
-            <div className='w-full grid grid-cols-3 gap-1 my-5'>
+            <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 my-5'>
                 {
                     trending?.map(item =>
 
