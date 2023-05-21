@@ -1,49 +1,80 @@
 import React from 'react';
 
 const ContactUs = () => {
-    return (
-        <div>
-            <section className="bg-gray-100 py-12">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-semibold text-center mb-8">Contact Us</h2>
-        <form className="max-w-lg mx-auto">
-          <div className="mb-4">
-            <input
-              className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="name"
-              type="text"
-              placeholder="Enter your name"
-            />
+  return (
+    <div className='my-5 bg-slate-300 p-5'>
+      <h2 className="text-3xl font-bold text-center">Contact Us</h2>
+      <p className='text-center mb-5 font-bold'>We always with You</p>
+
+      <div className='flex flex-col md:flex-row gap-2'>
+        <div className='w-full md:w-1/2 grid grid-cols-2 gap-1'>
+          <div className='bg-slate-200 text-center p-4 card' data-aos="fade-down-right">
+
+            <h1 className='font-bold text-xl'>Address</h1>
+            <p className='font-bold text-lg'>Aladan street</p>
+            <p className='font-bold text-lg'>New Yourk</p>
           </div>
-          <div className="mb-4">
-            <input
-              className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="email"
-              type="email"
-              placeholder="Enter your email"
-            />
+          <div className='bg-slate-200 text-center p-4 card  ' data-aos="fade-down-left">
+
+            <h1 className='font-bold text-xl'>Call us</h1>
+            <p className='font-bold text-lg'>Aladan street</p>
+            <p className='font-bold text-lg'>New Yourk</p>
           </div>
-          <div className="mb-4">
-            <textarea
-              className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="message"
-              rows="1"
-              placeholder="Enter your message"
-            ></textarea>
+          <div className='bg-slate-200 text-center p-4 card' data-aos="fade-up-right">
+            <h1 className='font-bold text-xl'>Email Us</h1>
+            <p className='font-bold text-lg'>info@gmail.com</p>
+            <p className='font-bold text-lg'>info@gmail.com</p>
           </div>
-          <div className="flex justify-center">
-            <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-              type="submit"
-            >
-              Submit
-            </button>
+          <div className='bg-slate-200 text-center p-4 card ' data-aos="fade-up-left">
+            <h1 className='font-bold text-xl'>Working Hours</h1>
+            <p className='font-bold text-lg'>Mon-fri : 9am - 5pm</p>
+            <p className='font-bold text-lg'>Sunday: 9am - 1pm </p>
           </div>
-        </form>
-      </div>
-    </section>
         </div>
-    );
+
+        <section className="bg-slate-200 py-2 w-full md:w-1/2 rounded-md">
+          <div className="container mx-auto py-8" data-aos="zoom-in-left">
+            <div className="max-w-lg mx-auto">
+              <div className="mb-2">
+                <input
+                  className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  id="name"
+                  type="text"
+                  placeholder="Enter your name"
+                />
+              </div>
+              <div className="mb-2">
+                <input
+                  className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  id="email"
+                  type="email"
+                  placeholder="Enter your email"
+                />
+              </div>
+              <div className="mb-2">
+                <textarea
+                  className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  id="message"
+                  rows="1"
+                  placeholder="Enter your message"
+                ></textarea>
+              </div>
+              <div className="flex justify-center">
+                <button
+                  className="bg-slate-500 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                  type="submit"
+                >
+                  Send Message
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+    </div>
+
+  );
 };
 
 export default ContactUs;

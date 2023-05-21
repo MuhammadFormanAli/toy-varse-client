@@ -6,6 +6,7 @@ import useTitle from '../../useTitle';
 import ContactUs from './homeComponents/contact/ContactUs';
 import Category from './homeComponents/category/Category';
 import Review from './homeComponents/customerReview/Review';
+import MostLoved from './homeComponents/mostLoved/MostLoved';
 
 const Home = () => {
     useTitle("HOME")
@@ -14,6 +15,7 @@ const Home = () => {
             <Banner></Banner>
             <Gallery></Gallery>
             <Category></Category>
+            <MostLoved></MostLoved>
             <Review></Review>
             <ContactUs></ContactUs>
         </div>
